@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Sign Up | PrintForge Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">◼</span><span>PrintForge Club</span></a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Products</a>
+    <a class="active" href="login.html">Login / Sign Up</a>
+    <a href="member.html">Member Area</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+<main class="shell auth-wrap">
+  <section class="card form-card">
+    <span class="eyebrow">Existing member</span>
+    <h2 style="margin:14px 0;">Log in</h2>
+    <form id="loginForm" class="form-grid">
+      <label>Email <input id="loginEmail" type="email" required /></label>
+      <label>Password <input id="loginPassword" type="password" required minlength="6" /></label>
+      <button class="btn btn-primary" type="submit">Log In</button>
+      <div id="loginStatus" class="status hidden"></div>
+    </form>
+  </section>
+
+  <section class="card form-card">
+    <span class="eyebrow">New club member request</span>
+    <h2 style="margin:14px 0;">Create account + request access</h2>
+    <form id="signupForm" class="form-grid">
+      <label>Full name <input id="signupName" required maxlength="80" /></label>
+      <label>Email <input id="signupEmail" type="email" required /></label>
+      <label>Password <input id="signupPassword" type="password" required minlength="6" /></label>
+      <label>Why do you want to join? <textarea id="signupReason" required maxlength="500" placeholder="I want to learn printing, request parts, help the club..."></textarea></label>
+      <button class="btn btn-primary" type="submit">Send Membership Request</button>
+      <div id="signupStatus" class="status hidden"></div>
+    </form>
+  </section>
+</main>
+<script type="module" src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrintForge Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">◼</span><span>PrintForge Club</span></a>
+    <nav class="nav">
+      <a class="active" href="index.html">Home</a>
+      <a href="shop.html">Products</a>
+      <a href="login.html">Login / Sign Up</a>
+      <a href="member.html">Member Area</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">3-D printing requests, club approvals, code-based ordering</span>
+        <h1>A club site that runs like a mini Amazon — without payments.</h1>
+        <p class="lead">People sign up, the owner approves or rejects requests in an admin page, approved members receive a unique club order code, and members use that code to order 3-D prints from a database-backed product catalog.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="login.html">Request Membership</a>
+          <a class="btn" href="shop.html">Browse Products</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <div class="metric-grid">
+          <div class="metric"><strong>1</strong><span>Signup request sent to owner</span></div>
+          <div class="metric"><strong>2</strong><span>Owner approves + issues code</span></div>
+          <div class="metric"><strong>3</strong><span>Member shops with code</span></div>
+          <div class="metric"><strong>4</strong><span>Orders saved in Firestore</span></div>
+        </div>
+        <div class="mini-card">
+          <h3>Included system</h3>
+          <p class="muted">Firebase Auth, Firestore products, user requests, member codes, orders, admin approval tools, and admin product creation.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section grid-3">
+      <article class="mini-card">
+        <h3>Membership approval</h3>
+        <p class="muted">A new user creates an account and their profile enters <b>pending</b> status until the club owner approves it.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Code checkout</h3>
+        <p class="muted">Approved users see a code like <b>JANE-8KD2QZ</b>. That code is required to place orders.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Admin inventory</h3>
+        <p class="muted">The owner creates, edits, hides, and deletes products directly from the admin dashboard.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

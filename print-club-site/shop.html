@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | PrintForge Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">◼</span><span>PrintForge Club</span></a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a class="active" href="shop.html">Products</a>
+    <a href="login.html">Login / Sign Up</a>
+    <a href="member.html">Member Area</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+<main class="shell">
+  <section class="section-head">
+    <div>
+      <span class="eyebrow">No-money club catalog</span>
+      <h1 style="font-size:clamp(2.3rem,5vw,4.8rem); margin-top:14px;">Order 3-D prints with your approved code.</h1>
+    </div>
+  </section>
+  <div id="shopStatus" class="status warn">Log in and wait for owner approval before placing orders. Anyone can browse available products.</div>
+  <section id="productsGrid" class="section product-grid"></section>
+</main>
+<script type="module" src="shop.js"></script>
+</body>
+</html>
