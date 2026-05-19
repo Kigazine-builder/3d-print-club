@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3-D Print Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="cube">▣</span> 3-D Print Club</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#member">Member</a>
+      <a href="#admin">Admin</a>
+      <button id="logoutBtn" class="ghost hidden">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="pill">Free club ordering system</p>
+        <h1>Request access. Get a code. Order 3-D prints.</h1>
+        <p class="lead">Members sign up, the owner approves requests in the admin page, and approved members get a private club code for free print orders.</p>
+        <div class="actions">
+          <a class="btn primary" href="#auth">Sign up / Login</a>
+          <a class="btn" href="#shop">View products</a>
+        </div>
+      </div>
+      <div class="preview-card">
+        <div class="big-icon">🧱</div>
+        <h2>How it works</h2>
+        <ol>
+          <li>Make an account and send a request.</li>
+          <li>Owner approves you in Admin.</li>
+          <li>Your member code appears.</li>
+          <li>Order products using that code.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="auth" class="panel grid2">
+      <div>
+        <h2>Login</h2>
+        <form id="loginForm" class="form">
+          <input id="loginEmail" type="email" placeholder="Email" required />
+          <input id="loginPassword" type="password" placeholder="Password" required />
+          <button class="btn primary">Login</button>
+        </form>
+      </div>
+      <div>
+        <h2>Request membership</h2>
+        <form id="signupForm" class="form">
+          <input id="signupName" placeholder="Your name" maxlength="60" required />
+          <input id="signupEmail" type="email" placeholder="Email" required />
+          <input id="signupPassword" type="password" placeholder="Password, at least 6 characters" minlength="6" required />
+          <textarea id="signupReason" placeholder="Why do you want to join?" maxlength="300"></textarea>
+          <button class="btn primary">Create account + request</button>
+        </form>
+      </div>
+      <p id="authMsg" class="status hidden"></p>
+    </section>
+
+    <section id="member" class="panel">
+      <h2>Member area</h2>
+      <div id="memberBox" class="status">Log in to see your request status and code.</div>
+      <h3>Your orders</h3>
+      <div id="myOrders" class="list"></div>
+    </section>
+
+    <section id="shop" class="panel">
+      <div class="section-head">
+        <div>
+          <p class="pill">Amazon-style, but free</p>
+          <h2>Products</h2>
+        </div>
+        <p id="shopMsg" class="status small">Approved members can order with their code.</p>
+      </div>
+      <div id="products" class="products"></div>
+    </section>
+
+    <section id="admin" class="panel">
+      <h2>Owner admin page</h2>
+      <div id="adminGate" class="status">Log in as the owner email to use admin tools.</div>
+      <div id="adminTools" class="hidden">
+        <div class="grid2">
+          <div>
+            <h3>Create product</h3>
+            <form id="productForm" class="form">
+              <input id="productName" placeholder="Product name" required />
+              <input id="productIcon" placeholder="Emoji/icon, example: 🧩" maxlength="8" />
+              <input id="productCategory" placeholder="Category" />
+              <textarea id="productDescription" placeholder="Description" required></textarea>
+              <button class="btn primary">Save product</button>
+            </form>
+          </div>
+          <div>
+            <h3>Pending requests</h3>
+            <div id="requests" class="list"></div>
+          </div>
+        </div>
+        <h3>All products</h3>
+        <div id="adminProducts" class="list"></div>
+        <h3>All orders</h3>
+        <div id="allOrders" class="list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
