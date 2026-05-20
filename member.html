@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Area | PrintForge Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">◼</span><span>PrintForge Club</span></a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Products</a>
+    <a href="login.html">Login / Sign Up</a>
+    <a class="active" href="member.html">Member Area</a>
+    <a href="admin.html">Admin</a>
+    <button class="ghost-btn" id="logoutBtn">Logout</button>
+  </nav>
+</header>
+<main class="shell">
+  <section class="section-head">
+    <div>
+      <span class="eyebrow">Member dashboard</span>
+      <h1 style="font-size:clamp(2.3rem,5vw,4.6rem); margin-top:14px;">Your club access</h1>
+    </div>
+  </section>
+
+  <section class="dashboard-grid">
+    <article class="panel form-card">
+      <h2>Membership status</h2>
+      <div id="profileBox" class="stack" style="margin-top:18px;"></div>
+    </article>
+    <article class="panel form-card">
+      <h2>How ordering works</h2>
+      <div class="stack muted" style="margin-top:18px; line-height:1.7;">
+        <div>1. Wait until your membership is approved.</div>
+        <div>2. Copy the code shown here.</div>
+        <div>3. Open Products and place an order using the code.</div>
+        <div>4. Your order appears below and in the owner admin page.</div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section panel form-card">
+    <div class="section-head"><h2>Your orders</h2><a class="btn btn-primary" href="shop.html">Order Products</a></div>
+    <div id="ordersList" class="list"></div>
+  </section>
+</main>
+<script type="module" src="member.js"></script>
+</body>
+</html>
