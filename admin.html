@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | PrintForge Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">◼</span><span>PrintForge Club</span></a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Products</a>
+    <a href="login.html">Login / Sign Up</a>
+    <a href="member.html">Member Area</a>
+    <a class="active" href="admin.html">Admin</a>
+    <button class="ghost-btn" id="logoutBtn">Logout</button>
+  </nav>
+</header>
+<main class="shell">
+  <div id="adminGate" class="status warn">Checking admin access...</div>
+  <div id="adminApp" class="hidden">
+    <section class="section-head">
+      <div>
+        <span class="eyebrow">Owner dashboard</span>
+        <h1 style="font-size:clamp(2.3rem,5vw,4.8rem); margin-top:14px;">Approve members, create products, manage orders.</h1>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel form-card">
+        <h2>Create product</h2>
+        <form id="productForm" class="form-grid" style="margin-top:18px;">
+          <label>Name <input id="productName" required maxlength="90" /></label>
+          <label>Icon emoji <input id="productIcon" maxlength="8" placeholder="🧩" /></label>
+          <label>Category <input id="productCategory" maxlength="50" placeholder="Keychains, parts, toys..." /></label>
+          <label>Description <textarea id="productDescription" required maxlength="500"></textarea></label>
+          <button class="btn btn-primary" type="submit">Create Product</button>
+          <div id="productStatus" class="status hidden"></div>
+        </form>
+      </article>
+      <article class="panel form-card">
+        <h2>Admin notes</h2>
+        <div class="stack muted" style="margin-top:18px; line-height:1.7;">
+          <div>• Membership approvals generate a unique visible member code.</div>
+          <div>• Orders are saved with user, code, product, quantity, and notes.</div>
+          <div>• Products can be hidden instead of deleted by marking inactive.</div>
+          <div>• Set your owner email in <b>firebase-config.js</b>.</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section panel form-card">
+      <div class="section-head"><h2>Pending membership requests</h2></div>
+      <div id="requestsList" class="list"></div>
+    </section>
+
+    <section class="section panel form-card">
+      <div class="section-head"><h2>Products</h2></div>
+      <div id="adminProducts" class="list"></div>
+    </section>
+
+    <section class="section panel form-card">
+      <div class="section-head"><h2>Orders</h2></div>
+      <div id="ordersAdmin" class="list"></div>
+    </section>
+  </div>
+</main>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
